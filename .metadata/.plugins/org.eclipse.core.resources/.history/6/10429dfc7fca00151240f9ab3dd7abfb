@@ -1,0 +1,11 @@
+package com.tutorialspoint.test;
+ 
+import java.util.List;
+ 
+public interface LibrarySessionBeanRemote {
+ 
+    void addBook(String bookName);
+ 
+    List getBooks();
+    
+}

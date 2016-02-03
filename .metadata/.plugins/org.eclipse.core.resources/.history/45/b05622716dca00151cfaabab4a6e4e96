@@ -1,0 +1,59 @@
+import java.io.IOException;
+import java.util.Properties;
+
+import javax.jms.Connection;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.MessageConsumer;
+import javax.jms.MessageListener;
+import javax.jms.Queue;
+import javax.jms.QueueSession;
+import javax.jms.TextMessage;
+import javax.jms.Topic;
+import javax.jms.TopicConnection;
+import javax.jms.TopicConnectionFactory;
+import javax.jms.TopicSession;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import org.apache.activemq.jndi.ActiveMQInitialContextFactory;
+
+public class Tester{
+	
+	public static void main(String[] args) throws NamingException, IOException, JMSException {
+		Context ctx = setContextDetails();
+		TopicConnectionFactory tcf = (TopicConnectionFactory) ctx.lookup("ConnectionFactory");
+		TopicConnection tc = (TopicConnection) tcf.createConnection("publisher", "password");
+		TopicSession ts = tc.createTopicSession(false, TopicSession.AUTO_ACKNOWLEDGE);
+		Topic t = (Topic) ctx.lookup("casualties");
+		System.out.println( receiveMessage(ts, t) );
+		ts.close();
+		tc.stop();
+		tc.close();
+	}
+	public static String receiveMessage(TopicSession session, T queue) throws JMSException{
+		MessageConsumer consumer = session.createConsumer(queue);
+		Message r = consumer.receive(); // Waits until a message arrives, throw java.io.EOFException if the message queue is turned off
+		if(r instanceof TextMessage){
+			TextMessage msg = (TextMessage) r;
+			return msg.getText();
+		}
+		return null;
+	}
+	
+	public static Context setContextDetails() throws NamingException, IOException{
+		Properties props = new Properties();
+		props.put(Context.PROVIDER_URL, "tcp://localhost:61616");
+		props.put(Context.INITIAL_CONTEXT_FACTORY, ActiveMQInitialContextFactory.class.getName()); //"org.apache.activemq.jndi.ActiveMQInitialContextFactory"
+		props.put("topic.casualties", "casualties");
+		Context ctx = new InitialContext(props);
+		return ctx;
+	}
+
+	@Override
+	public void onMessage(Message message) {
+		
+	}
+	
+}

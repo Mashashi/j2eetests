@@ -1,0 +1,7 @@
+https://www.mulesoft.com/tcat/tomcat-start
+bin/catalina start
+bin/catalina stop
+
+https://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html
+localhost:8080/manager
+C:\Users\Rafael\Desktop\apache-tomcat-7.0.67\conf\tomcat-users.xml

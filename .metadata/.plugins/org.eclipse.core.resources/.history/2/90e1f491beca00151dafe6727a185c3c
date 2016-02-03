@@ -1,0 +1,10 @@
+Starting & stoping tomcat
+	https://www.mulesoft.com/tcat/tomcat-start
+	bin/catalina start
+	bin/catalina stop
+
+Adminitrations console
+	It is necessary to define a user
+	localhost:8080/manager
+	https://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html
+	C:\Users\Rafael\Desktop\apache-tomcat-7.0.67\conf\tomcat-users.xml

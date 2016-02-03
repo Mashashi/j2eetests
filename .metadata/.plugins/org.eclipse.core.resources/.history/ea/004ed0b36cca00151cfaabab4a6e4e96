@@ -1,0 +1,31 @@
+import java.io.IOException;
+import java.util.Properties;
+
+import javax.jms.Message;
+import javax.jms.MessageListener;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import org.apache.activemq.jndi.ActiveMQInitialContextFactory;
+
+public class Tester implements MessageListener{
+	public static void main(String[] args) {
+		Context c = setContextDetails();
+	}
+	
+	public static Context setContextDetails() throws NamingException, IOException{
+		Properties props = new Properties();
+		props.put(Context.PROVIDER_URL, "tcp://localhost:61616");
+		props.put(Context.INITIAL_CONTEXT_FACTORY, ActiveMQInitialContextFactory.class.getName()); //"org.apache.activemq.jndi.ActiveMQInitialContextFactory"
+		props.put("topic.casualties", "casualties");
+		Context ctx = new InitialContext(props);
+		return ctx;
+	}
+
+	@Override
+	public void onMessage(Message message) {
+		
+	}
+	
+}

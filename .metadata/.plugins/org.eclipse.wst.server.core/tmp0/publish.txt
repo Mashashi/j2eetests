@@ -1,0 +1,6 @@
+#GlassFish 3
+#Wed Feb 03 20:49:06 CET 2016
+org.eclipse.jst.jee.server\:SimpleBean=C\:\\Program Files\\glassfish-4.1.1\\glassfish\\domains\\domain1\\eclipseApps\\SimpleBean
+org.eclipse.jst.jee.server\:TestWebService=C\:\\Program Files\\glassfish-4.1.1\\glassfish\\domains\\domain1\\eclipseApps\\TestWebService
+org.eclipse.jst.jee.server\:SimpleBeanUseInsideServer=C\:\\Program Files\\glassfish-4.1.1\\glassfish\\domains\\domain1\\eclipseApps\\SimpleBeanUseInsideServer
+org.eclipse.jst.jee.server\:SimpleBeanUseInsideServerEAR=C\:\\Program Files\\glassfish-4.1.1\\glassfish\\domains\\domain1\\eclipseApps\\SimpleBeanUseInsideServerEAR

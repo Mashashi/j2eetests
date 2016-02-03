@@ -1,0 +1,31 @@
+package com.crunchify.restjersey;
+
+import javax.ejb.EJB;
+import javax.inject.Inject;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.Response;
+
+import org.json.JSONException;
+
+import com.tutorialspoint.stateless.LibrarySessionBeanRemote;
+
+@Path("/getmovies")
+public class GetMovies {
+	
+	@EJB
+	public LibrarySessionBeanRemote bean;
+	
+	@GET
+	public Response listBooks() throws JSONException {
+		String result = "";
+		if(bean!=null){
+			result = ""+bean.getBooks().size();
+		}else{
+			result = "Bean is null";
+		}
+		return Response.status(200).entity(result).build();
+		
+	}
+	
+}

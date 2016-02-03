@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.naming.Context"/>
+<fullyQualifiedTypeName name="javax.jms.QueueConnection"/>
+<fullyQualifiedTypeName name="javax.jms.QueueConnectionFactory"/>
+<fullyQualifiedTypeName name="javax.jms.Session"/>
+<fullyQualifiedTypeName name="javax.jms.Queue"/>
+<fullyQualifiedTypeName name="javax.jms.MessageProducer"/>
+<fullyQualifiedTypeName name="javax.jms.TextMessage"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="javax.jms.MessageConsumer"/>
+<fullyQualifiedTypeName name="javax.naming.spi.InitialContextFactory"/>
+<fullyQualifiedTypeName name="org.apache.activemq.jndi.ActiveMQInitialContextFactory"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="javax.jms.TopicConnectionFactory"/>
+<fullyQualifiedTypeName name="javax.jms.TopicConnection"/>
+<fullyQualifiedTypeName name="javax.jms.TopicSession"/>
+<fullyQualifiedTypeName name="javax.jms.Topic"/>
+<fullyQualifiedTypeName name="javax.jms.MessageListener"/>
+<fullyQualifiedTypeName name="javax.jms.TopicPublisher"/>
+<fullyQualifiedTypeName name="com.sun.enterprise.naming.impl.SerialInitContextFactory"/>
+<fullyQualifiedTypeName name="com.sun.corba.ee.impl.presentation.rmi.JNDIStateFactoryImpl"/>
+<fullyQualifiedTypeName name="com.tutorialspoint.stateless.LibrarySessionBeanRemote"/>
+<fullyQualifiedTypeName name="javax.ejb.EJB"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="javax.ejb.Stateless"/>
+<fullyQualifiedTypeName name="javax.inject.Inject"/>
+<fullyQualifiedTypeName name="com.sun.jersey.spi.inject.Inject"/>
+<fullyQualifiedTypeName name="org.glassfish.jersey.process.internal.RequestScoped"/>
+<fullyQualifiedTypeName name="com.sun.jersey.api.core.InjectParam"/>
+<fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+<fullyQualifiedTypeName name="javax.naming.NamingException"/>
+</qualifiedTypeNameHistroy>

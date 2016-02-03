@@ -1,0 +1,17 @@
+package com.crunchify.restjersey;
+
+import javax.ejb.EJB;
+import javax.ws.rs.Path;
+
+import com.tutorialspoint.stateless.LibrarySessionBeanRemote;
+
+@Path("/getmovies")
+public class GetMovies {
+	
+	@EJB(
+			beanName="LibrarySessionBean",
+			beanInterface=LibrarySessionBeanRemote.class
+		)
+	public LibrarySessionBeanRemote bean;
+	
+}

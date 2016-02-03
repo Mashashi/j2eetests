@@ -1,0 +1,43 @@
+package com.crunchify.restjersey;
+
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.Response;
+
+import org.json.JSONException;
+
+import com.tutorialspoint.stateless.LibrarySessionBeanRemote;
+
+/**
+ * http://rafael-pc:8080/SimpleBeanUseInsideServer/crunchify/getmovies
+ * 
+ * @author Rafael
+ *
+ */
+@Stateless
+@Path("/getmovies")
+public class GetMovies {
+	
+	//@EJB(name="LibrarySessionBean") // Also works
+	public LibrarySessionBeanRemote bean;
+	
+	@EJB(name="LibrarySessionBean")
+	public void setBean(LibrarySessionBeanRemote bean) {
+		this.bean = bean;
+	}
+	
+	@GET
+	public Response listBooks() throws JSONException {
+		String result = "";
+		if(bean!=null){
+			result = ""+bean.getBooks().size();
+		}else{
+			result = "Bean is null";
+		}
+		return Response.status(200).entity(result).build();
+		
+	}
+	
+}
