@@ -2,12 +2,18 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Remote" key="selection"/>
+		<item value="Messa" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="messa"/>
+			<item value="port"/>
+			<item value="https://docs.oracle.com/cd/E18930_01/html/821-2416/ablkb.html"/>
+			<item value="desti"/>
+			<item value="Dest"/>
+			<item value="dest"/>
 			<item value="remote"/>
 		</list>
 		<list key="replacehistory">

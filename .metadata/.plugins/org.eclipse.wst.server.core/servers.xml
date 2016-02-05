@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servers>
-  <server auto-publish-setting="1" glassfish.adminname="admin" glassfish.adminserverportnumber="4848" glassfish.domainpath="C:\Program Files\glassfish-4.1.1\glassfish\domains\domain1" glassfish.jarDeploy="false" glassfish.keepSessions="true" glassfish.serverportnumber="8080" glassfish.useAnonymousConnection="true" hostname="localhost" id="GlassFish 4 at localhost [domain1]" name="GlassFish 4 at localhost [domain1]" runtime-id="GlassFish 4" server-type="org.glassfish.jst.server.glassfish4" server-type-id="org.glassfish.jst.server.glassfish4" start-timeout="240" stop-timeout="240" timestamp="71">
-    <list key="modules" value0="004-glassfish_v4.1.1-SimpleBeanUseInsideServer::org.eclipse.jst.jee.server:004-glassfish_v4.1.1-SimpleBeanUseInsideServer::jst.web::3.1" value1="005-glassfish_v4.1.1-SimpleMessageDrivenBean::org.eclipse.jst.jee.server:005-glassfish_v4.1.1-SimpleMessageDrivenBean::jst.ejb::3.2"/>
+  <server auto-publish-setting="1" glassfish.adminname="admin" glassfish.adminserverportnumber="4848" glassfish.domainpath="C:\Program Files\glassfish-4.1.1\glassfish\domains\domain1" glassfish.jarDeploy="false" glassfish.keepSessions="true" glassfish.serverportnumber="8080" glassfish.useAnonymousConnection="true" hostname="localhost" id="GlassFish 4 at localhost [domain1]" name="GlassFish 4 at localhost [domain1]" runtime-id="GlassFish 4" server-type="org.glassfish.jst.server.glassfish4" server-type-id="org.glassfish.jst.server.glassfish4" start-timeout="240" stop-timeout="240" timestamp="80">
+    <list key="modules" value0="005-glassfish_v4.1.1-SimpleMessageDrivenBean::org.eclipse.jst.jee.server:005-glassfish_v4.1.1-SimpleMessageDrivenBean::jst.ejb::3.2"/>
   </server>
 </servers>

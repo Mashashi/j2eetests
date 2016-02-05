@@ -23,6 +23,9 @@ The libraries that are necessary to connect Hermes to OpenMQ are:
 
 Hermes doesn't seem to be able to write messages from glasfish openmq 
 
+As alternative to Hermes one could use QBrowaser Light it works better with OpenMQ and Weblogic MQ.
+
+
 ----------
 
 Application server admin can e made also through a console line command. This comman line tool
