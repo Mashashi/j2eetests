@@ -1,0 +1,29 @@
+http://stackoverflow.com/questions/12805377/what-is-activemq-used-for
+
+Macro passos para usar o active MQ
+	1. Configure JNDI
+	2. Send message
+	3. Receive message
+
+Passos para utilizar o active MQ
+	1. ConnectionFactory
+	2. Connection
+	3. Session
+	4. Destination
+	5. Message
+	6. MessageProducer/MessageConsumer
+	7. TopicProducer/TopicConsumer
+
+É possível na interface web http://127.0.0.1:8161/admin colocar uma mensagem na queue incializando diferentes atributos.
+	- Correlatio ID
+	- Reply To
+	- Priority
+	- Type
+	- Message Group
+
+Etc.
+
+conf/activemq.xml
+	Configurar elementos de segurança
+	Para que as mudanças feitas neste ficheiro sejam visíveis é necessário fazer restart ao activemq
+	If the permissions are not set and the user requests a queue if it is not created it will be

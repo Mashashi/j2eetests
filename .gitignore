@@ -1,5 +1,6 @@
 #.metadata
-#bin/
+bin/
+target/
 #tmp/
 #*.tmp
 #*.bak
@@ -28,13 +29,3 @@
 #.recommenders/
 
 # Folders to ignore
-001-activemq_v5.9.0-QueueExample/bin
-001-activemq_v5.9.0-QueueExample/target
-002-activemq_v5.9.0-TopicExample/bin
-002-activemq_v5.9.0-TopicExample/target
-003-glassfish_v4.1.1-SimpleBean/bin
-003-glassfish_v4.1.1-SimpleBean/target
-004-glassfish_v4.1.1-SimpleBeanUseInsideServer/bin
-004-glassfish_v4.1.1-SimpleBeanUseInsideServer/target
-005-glassfish_v4.1.1-SimpleBeanUseOutsideServer/bin
-005-glassfish_v4.1.1-SimpleBeanUseOutsideServer/target

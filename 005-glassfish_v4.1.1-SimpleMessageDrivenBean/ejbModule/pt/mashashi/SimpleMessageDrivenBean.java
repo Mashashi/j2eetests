@@ -1,0 +1,42 @@
+package pt.mashashi;
+
+import javax.ejb.ActivationConfigProperty;
+import javax.ejb.MessageDriven;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.MessageListener;
+import javax.jms.TextMessage;
+
+import org.jboss.logging.Logger;
+
+/**
+ * Message-Driven Bean implementation class for: SimpleMessageDrivenBean
+ */
+@MessageDriven(
+		activationConfig = { @ActivationConfigProperty(
+				propertyName = "destination", propertyValue = "PhysicalQueueOpened"), @ActivationConfigProperty(
+				propertyName = "destinationType", propertyValue = "javax.jms.Queue")
+		}, 
+		mappedName = "PhysicalQueue")
+public class SimpleMessageDrivenBean implements MessageListener {
+
+    /**
+     * Default constructor. 
+     */
+    public SimpleMessageDrivenBean() {
+        // TODO Auto-generated constructor stub
+    }
+	
+	/**
+     * @see MessageListener#onMessage(Message)
+     */
+    public void onMessage(Message message) {
+    	Logger logger = Logger.getLogger(getClass().getName());
+    	try {
+			logger.info("Message arriveed: " + ((TextMessage)message).getText());
+		} catch (JMSException e) {
+			logger.error(e.getMessage());
+		}
+    }
+
+}

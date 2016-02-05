@@ -1,0 +1,22 @@
+Starting & Stopping the application
+
+	C:\Program Files\glassfish-4.1.1\glassfish\bin\startserv
+	C:\Program Files\glassfish-4.1.1\glassfish\bin\stopserv
+
+Administration console
+
+	http://localhost:4848/
+	
+
+
+
+Application server admin can e made also through a console line command. This comman line tool
+is available at:
+	C:\Program Files\glassfish-4.1.1\glassfish\bin\asadmin
+And is standard across application server implementations.
+
+Create a queue:
+
+	asadmin> create-jmsdest --desttype queue --property 
+	User=public:Password=public PhysicalQueue
+	Command create-jmsdest executed successfully.

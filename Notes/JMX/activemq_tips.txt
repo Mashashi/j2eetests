@@ -14,7 +14,7 @@ Passos para utilizar o active MQ
 	6. MessageProducer/MessageConsumer
 	7. TopicProducer/TopicConsumer
 
-É possível na interface web http://127.0.0.1:8161/admin colocar uma mensagem na queue incializando diferentes atributos.
+Eh poss�vel na interface web http://127.0.0.1:8161/admin colocar uma mensagem na queue inicializando diferentes atributos.
 	- Correlatio ID
 	- Reply To
 	- Priority
@@ -24,6 +24,9 @@ Passos para utilizar o active MQ
 Etc.
 
 conf/activemq.xml
-	Configurar elementos de segurança
-	Para que as mudanças feitas neste ficheiro sejam visíveis é necessário fazer restart ao activemq
+	Configurar elementos de segurancaa
+	Para que as mudancas feitas neste ficheiro sejam visiveis eh necessario fazer restart ao activemq
 	If the permissions are not set and the user requests a queue if it is not created it will be
+	
+To use this implementation in a remote fashion is necessary to add activemq-all-5.9.0.jar.
+

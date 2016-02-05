@@ -1,0 +1,56 @@
+Starting & Stopping the application
+
+	C:\Program Files\glassfish-4.1.1\glassfish\bin\startserv
+	C:\Program Files\glassfish-4.1.1\glassfish\bin\stopserv
+
+Administration console
+
+	http://localhost:4848/
+	
+Configure logs at: Administration console > Configurations > server-config > Logger Setings
+
+Logs at:
+	${com.sun.aas.instanceRoot}/logs/server.log
+Example
+	C:\Program Files\glassfish-4.1.1\glassfish\domains\domain1\logs\server.log
+
+
+
+
+
+----------
+
+Application server admin can e made also through a console line command. This comman line tool
+is available at:
+	C:\Program Files\glassfish-4.1.1\glassfish\bin\asadmin
+And is standard across application server implementations.
+
+--
+Test if jms server is running:
+
+	https://docs.oracle.com/cd/E18930_01/html/821-2433/jms-ping-1.html
+--
+
+See https://docs.oracle.com/cd/E18930_01/html/821-2416/ablkj.html
+
+To Create a JMS Physical Destination
+
+	asadmin> create-jmsdest --desttype queue --property User=public:Password=public PhysicalQueue
+	Command create-jmsdest executed successfully.
+
+To List JMS Physical Destinations
+
+	asadmin> list-jmsdest
+	PhysicalQueue queue {} 
+	PhysicalTopic topic {}
+	Command list-jmsdest executed successfully.
+
+To Purge Messages From a Physical Destination
+	
+	asadmin> flush-jmsdest --desttype queue PhysicalQueue
+
+To Delete a JMS Physical Destination
+
+	asadmin> delete-jmsdest --desttype queue PhysicalQueue
+	Command delete-jmsdest executed successfully
+	Command flush-jmsdest executed successfully
